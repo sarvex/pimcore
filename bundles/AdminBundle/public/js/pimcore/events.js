@@ -228,4 +228,10 @@
   * grid and object are passed as parameters
   */
  pimcore.events.prepareDocumentTypesGrid = "pimcore.documentTypesGrid.prepare";
+
+/**
+ * before building menu
+ * for adding menu entries with priorities to be sorted
+ */
+pimcore.events.preMenuBuild = "pimcore.menu.preBuild";
  
