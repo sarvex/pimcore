@@ -127,3 +127,5 @@ class AttributeSet
         return $this;
     }
 }
+
+@class_alias(AttributeSet::class, 'Pimcore\Translation\AttributeSet\AttributeSet');

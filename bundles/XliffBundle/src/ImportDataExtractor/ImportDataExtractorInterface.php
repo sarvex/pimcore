@@ -41,3 +41,5 @@ interface ImportDataExtractorInterface
      */
     public function countSteps(string $importId): int;
 }
+
+@class_alias('Pimcore\Bundle\XliffBundle\ImportDataExtractor\ImportDataExtractorInterface', 'Pimcore\Translation\ImportDataExtractor\ImportDataExtractorInterface');

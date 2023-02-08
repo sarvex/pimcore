@@ -22,3 +22,5 @@ interface TranslationItemResolverInterface
 {
     public function resolve(string $type, string $id): ?TranslationItem;
 }
+
+@class_alias(TranslationItemResolverInterface::class, 'Pimcore\Translation\ImportDataExtractor\TranslationItemResolver\TranslationItemResolverInterface');
