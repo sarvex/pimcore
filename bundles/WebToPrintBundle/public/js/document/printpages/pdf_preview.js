@@ -267,6 +267,10 @@ pimcore.document.printpages.pdfpreview = Class.create({
         var data = record.data;
         var type = data.type;
 
+        if (type === "text") {
+            return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
         if (type == "bool") {
             if (value) {
                 return '<div style="text-align: left"><div role="button" class="x-grid-checkcolumn x-grid-checkcolumn-checked" style=""></div></div>';
