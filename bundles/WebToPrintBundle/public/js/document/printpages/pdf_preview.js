@@ -271,12 +271,8 @@ pimcore.document.printpages.pdfpreview = Class.create({
             return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
         }
 
-        if (type == "bool") {
-            if (value) {
-                return '<div style="text-align: left"><div role="button" class="x-grid-checkcolumn x-grid-checkcolumn-checked" style=""></div></div>';
-            } else {
-                return '<div style="text-align: left"><div role="button" class="x-grid-checkcolumn" style=""></div></div>';
-            }
+        if (type === "bool") {
+            return '<div style="text-align: left"><div role="button" class="x-grid-checkcolumn' + (value ? ' x-grid-checkcolumn-checked' : '') + '" style=""></div></div>';
         }
 
         if (type == "select") {
